@@ -1,1 +1,3 @@
-
+var storeModel = [
+  Text: 
+]
