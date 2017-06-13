@@ -69,5 +69,20 @@ var capitolHill = {min:20,
                   cookiesPerSale:2.3
                   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
                   getRandomCustomerCount:randomCount,
-                  console.log}
-var alki = {}
+                  console.log(randomCount);
+                  generatedCookyCountByHour:cookiesPerHour,
+                  console.log(cookiesPerHour);
+                  generatedCookiesByDay:cookiesPerDay,
+                  console.log(cookiesPerDay);
+                  }
+var alki = {min:2,
+                  max:16,
+                  cookiesPerSale:4.6,
+                  hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
+                  getRandomCustomerCount:randomCount,
+                  console.log(randomCount);
+                  generatedCookyCountByHour:cookiesPerHour,
+                  console.log(cookiesPerHour);
+                  generatedCookiesByDay:cookiesPerDay,
+                  console.log(cookiesPerDay);
+                  }
