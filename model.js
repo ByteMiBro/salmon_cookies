@@ -46,12 +46,15 @@ function cookiesPerDay(generatedCookiesByDay)
 
 //put in if open or if colsed
 
+// TODO: Add function to format 24-hour time as AM/PM
+// TODO: Maybe update hours on all locations to use 24-hour time
+
 var firstAndPike = {min:23,
   max:65,
   cookiesPerSale:6.3,
   //hours: specify the actual hours the store is open not the number of hours
   //hours: start at the first hour store opens and end with the last hour the store is open
-  hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
+  hours:[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
   getRandomCustomerCount:randomCount,
   generatedCookyCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
