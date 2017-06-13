@@ -1,4 +1,5 @@
 //just list of stores
+//calculates daily projection sales for each location
 var storeModel = [{firstAndPike},
                   {seaTacAirport},
                   {seattleCenter},
@@ -11,15 +12,19 @@ function numberofStores()
 
 function randomCount()
 {
-  return Math.random() * (this.max - this.min) + this.min;
+  return Math.random() * (this.max() - this.min()) + this.min();
 };
-// take number of
-function cookiesPurchased(){
-  for
-  this.simulatedCookiesPerHour = [
-    this.getRandomCustomerCount() * this.cookiesPerHour,];
-};
+// take number of average cookies times
+function cookiesPerHour();
+{
+  return this.getRandomCustomerCount() * this.cookiesPerSale();
+}
+function cookiesPerDay();
+{
+  return this.generatedCookyCountByHour() * this.hours();
+}
 for
+//put in if open or if colsed
 var hoursPerStore{this.hours * numberofStores}
 var firstAndPike = {min:23,
                   max:65,
@@ -28,8 +33,8 @@ var firstAndPike = {min:23,
                   //hours: start at the first hour store opens and end with the last hour the store is open
                   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8]
                   getRandomCustomerCount: randomCount,
-                  generateCustCountByHour: cookiesPerHour,
-                  cookiesPerHour:
+                  generatedCookyCountByHour: cookiesPerHour,
+                  generatedCookiesByDay: cookiesPerDay
                   };
 
 var seaTacAirport{}
