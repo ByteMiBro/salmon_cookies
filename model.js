@@ -33,11 +33,11 @@ function cookiesPerHour(generatedCookieCountByHour)
 
   var result = [];
   for (var i = 0; i < this.hours.length; i++) {
-    var hour = hours[i];
+    var hour = this.hours[i];
 
     result[i] = this.getRandomCustomerCount() * this.cookiesPerHour;
   }
-  return result;
+  this.simulatedCookiesByHour = result;
 }
 //ceck the amount of hours at every store then multipy that by
 function cookiesPerDay(generatedCookiesByDay)
