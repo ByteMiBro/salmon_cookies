@@ -25,12 +25,11 @@ function randomCount(getRandomCustomerCount)
 // take number of average cookies times
 function cookiesPerHour(generatedCookieCountByHour)
 {
-
-  for (var i = 0 ; i < this.getRandomCustomerCount.length ; i++)
-  {
-    calculatedProduct = multipy(this.cookiesPerSale, this.getRandomCustomerCount[i])[0];
+  var result = [];
+  for (var i = 0; i < this.hours.length; i++) {
+    result[i] = i * 2; // TODO: change to real calculation
   }
-  return [calculatedProduct];
+  return result;
 }
 //ceck the amount of hours at every store then multipy that by
 function cookiesPerDay(generatedCookiesByDay)
