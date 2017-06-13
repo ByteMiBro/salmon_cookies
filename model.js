@@ -52,24 +52,12 @@ var firstAndPike = {min:23,
   //hours: specify the actual hours the store is open not the number of hours
   //hours: start at the first hour store opens and end with the last hour the store is open
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-  getRandomCustomerCount:[],
-  generatedCookyCountByHour:[],
-  generatedCookiesByDay:[],
+  getRandomCustomerCount:randomCount,
+  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookiesByDay:cookiesPerDay,
 };
-console.log(firstAndPike.min);
-console.log(firstAndPike.max);
-console.log(firstAndPike.cookiesPerSale);
 console.log(firstAndPike.hours.length);
 //shouldbe15
-console.log(firstAndPike.getRandomCustomerCount.length);
-//shouldbe15
-//console.log(firstAndPike.getRandomCustomerCount);
-console.log(firstAndPike.generatedCookyCountByHour.length);
-//shouldbe15
-//console.log(firstAndPike.generatedCookyCountByHour);
-console.log(firstAndPike.generatedCookiesByDay.length);
-//shouldbe1
-//console.log(firstAndPike.generatedCookiesByDay);
 
 var seaTacAirport = {min:3,
   max:24,
@@ -112,4 +100,4 @@ var storeModel = [firstAndPike,
   alki,
 ];
 
-console.log(storeModel.length);
+console.log(storeModel);
