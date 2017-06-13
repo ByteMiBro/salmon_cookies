@@ -1,17 +1,9 @@
 //just list of stores
 //calculates daily projection sales for each location
-var storeModel = [firstAndPike,
-  seaTacAirport,
-  seattleCenter,
-  capitolHill,
-  alki,
-];
-
-console.log(storeModel.length);
 function randomCount(getRandomCustomerCount)
 {
 
-  for (var i = 0 ; i < this.hours.length ; i++)
+  for (var i = 0 ; i < this.hours.length ; i++) {
     var people = Math.random() * (this.max - this.min) + this.min;
   }
 
@@ -73,7 +65,7 @@ console.log(firstAndPike.max);
 console.log(firstAndPike.cookiesPerSale);
 console.log(firstAndPike.hours.length);
 //shouldbe15
-console.log(fristAndPike.getRandomCustomerCount.length);
+console.log(firstAndPike.getRandomCustomerCount.length);
 //shouldbe15
 //console.log(firstAndPike.getRandomCustomerCount);
 console.log(firstAndPike.generatedCookyCountByHour.length);
@@ -128,3 +120,12 @@ var alki = {min:2,
   generatedCookiesByDay:cookiesPerDay,
   //console.log(cookiesPerDay);
 };
+
+var storeModel = [firstAndPike,
+  seaTacAirport,
+  seattleCenter,
+  capitolHill,
+  alki,
+];
+
+console.log(storeModel.length);
