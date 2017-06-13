@@ -6,26 +6,34 @@ var storeModel = [firstAndPike,
   capitolHill,
   alki,
 ];
-function numberofStores()
-{
-  return storeModel.length;
-}
-//console.log(numberofStores)
+
+console.log(storeModel.length);
 function randomCount(getRandomCustomerCount)
 {
-  var calculatedSum = 0;
+
+  for (var i = 0 ; i < this.hours.length ; i++)
+    var people = Math.random() * (this.max - this.min) + this.min;
+  }
+
+  //create a new array with same number of items but runs this code for each item
+  return ;
+}
+
+/*function customersForEachhour(getRandomCustomerCount)
+{
+  var calculatedProduct = 1;
   for (var i = 0 ; i < this.hours.length ; i++)
   {
-    calculatedSum = sum(Math.random() * (this.max - this.min),this.min)[0];
+    var newArray = this.hours.length;
+    calculatedProduct = multiply(newArray,randomCustomer)[0];
   }
-  return [calculatedSum];
-  //store values in array with same number of items as hours
-}
+  return [calculatedProduct];
+}*/
 //testRandomCount(getRandomCustomerCount)
 // take number of average cookies times
 function cookiesPerHour(generatedCookyCountByHour)
 {
-  var calculatedProduct = 1;
+
   for (var i = 0 ; i < this.getRandomCustomerCount.length ; i++)
   {
     calculatedProduct = multipy(this.cookiesPerSale, this.getRandomCustomerCount[i])[0];
