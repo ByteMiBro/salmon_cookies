@@ -23,7 +23,7 @@ function randomCount(getRandomCustomerCount)
 }*/
 //testRandomCount(getRandomCustomerCount)
 // take number of average cookies times
-function cookiesPerHour(generatedCookyCountByHour)
+function cookiesPerHour(generatedCookieCountByHour)
 {
 
   for (var i = 0 ; i < this.getRandomCustomerCount.length ; i++)
@@ -56,7 +56,7 @@ var firstAndPike = {min:23,
   //hours: start at the first hour store opens and end with the last hour the store is open
   hours:[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
   getRandomCustomerCount:randomCount,
-  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
 console.log(firstAndPike.hours.length);
@@ -67,7 +67,7 @@ var seaTacAirport = {min:3,
   cookiesPerSale:1.2,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
   getRandomCustomerCount:randomCount,
-  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
 var seattleCenter = {min:11,
@@ -75,7 +75,7 @@ var seattleCenter = {min:11,
   cookiesPerSale:3.7,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
   getRandomCustomerCount:randomCount,
-  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
 
@@ -84,7 +84,7 @@ var capitolHill = {min:20,
   cookiesPerSale:2.3,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
   getRandomCustomerCount:randomCount,
-  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
 var alki = {min:2,
@@ -92,7 +92,7 @@ var alki = {min:2,
   cookiesPerSale:4.6,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
   getRandomCustomerCount:randomCount,
-  generatedCookyCountByHour:cookiesPerHour,
+  generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
 
