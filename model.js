@@ -35,7 +35,7 @@ function cookiesPerHour()
 
   var result = [];
   for (var i = 0; i < this.hours.length; i++) {
-    var hour = this.hours[i];
+    //var hour = this.hours[i];
 
     result[i] = this.simulatedCustomersByHour[i] * this.cookiesPerSale;
   }
@@ -55,8 +55,8 @@ function cookiesPerDay(generatedCookiesByDay)
 
 //put in if open or if colsed
 
-// TODO: Add function to format 24-hour time as AM/PM
-// TODO: Maybe update hours on all locations to use 24-hour time
+// Add function to format 24-hour time as AM/PM
+// Maybe update hours on all locations to use 24-hour time
 
 var firstAndPike = {min:23,
   max:65,
