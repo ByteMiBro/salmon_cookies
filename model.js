@@ -1,14 +1,15 @@
 //just list of stores
 //calculates daily projection sales for each location
-function randomCount(getRandomCustomerCount)
+function randomCount()
 {
+  var randomCustomersPerHour = [];
 
   for (var i = 0 ; i < this.hours.length ; i++) {
-    var people = Math.random() * (this.max - this.min) + this.min;
+    randomCustomersPerHour[i] = Math.random() * (this.max - this.min) + this.min;
   }
 
   //create a new array with same number of items but runs this code for each item
-  return ;
+  this.simulatedCustomersByHour = randomCustomersPerHour;
 }
 
 /*function customersForEachhour(getRandomCustomerCount)
@@ -23,7 +24,7 @@ function randomCount(getRandomCustomerCount)
 }*/
 //testRandomCount(getRandomCustomerCount)
 // take number of average cookies times
-function cookiesPerHour(generatedCookieCountByHour)
+function cookiesPerHour()
 {
   /*
   return this.hours.map(function (hour) {
