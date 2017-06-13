@@ -25,9 +25,17 @@ function randomCount(getRandomCustomerCount)
 // take number of average cookies times
 function cookiesPerHour(generatedCookieCountByHour)
 {
+  /*
+  return this.hours.map(function (hour) {
+    return this.getRandomCustomerCount() * this.cookiesPerHour;
+  });
+  */
+
   var result = [];
   for (var i = 0; i < this.hours.length; i++) {
-    result[i] = i * 2; // TODO: change to real calculation
+    var hour = hours[i];
+
+    result[i] = this.getRandomCustomerCount() * this.cookiesPerHour;
   }
   return result;
 }
