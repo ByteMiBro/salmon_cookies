@@ -10,34 +10,37 @@ function numberofStores()
 {
   return storeModel.length;
 }
-
-function randomCount(customersArray)
+//console.log(numberofStores)
+function randomCount(getRandomCustomerCount)
 {
+  var calculatedSum = 0;
   for (var i = 0 ; i < this.hours.length ; i++){
-    Math.random() * (this.max - this.min) + this.min;
+    calculatedSum = sum(Math.random() * (this.max - this.min),this.min)[0];
   }
-  return customersArray
+  return [calculatedSum];
   //store values in array with same number of items as hours
 }
+//testRandomCount(getRandomCustomerCount)
 // take number of average cookies times
-function cookiesPerHour(hourlyCookyArray)
+function cookiesPerHour()
 {
+  var calculatedProduct = 1
   for (var i = 0 ; i < this.hours.length ; i++)
   {
-    this.cookiesPerSale * this.customersArray[i];
+    calculatedProduct = this.cookiesPerSale * this.getRandomCustomerCount[i];
   }
-  return hourlyCookyArray
+  return generatedCookyCountByHour
 }
 //ceck the amount of hours at every store then multipy that by
-function cookiesPerDay(totalLocationCookies)
+function cookiesPerDay()
 {
   var calculatedSum = 0;
   for(i = 0 ; i < this.hours.length ; i++)
   {
-    var valueFromArray = this.customersArray[i];
+    var valueFromArray = this.getRandomCustomerCount[i];
     calculatedSum = sum(valueFromArray, calculatedSum)[0];
   }
-  return totalLocationCookies;
+  return generatedCookiesByDay;
 }
 
 //put in if open or if colsed
@@ -48,22 +51,19 @@ var firstAndPike = {min:23,
                   //hours: specify the actual hours the store is open not the number of hours
                   //hours: start at the first hour store opens and end with the last hour the store is open
                   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-                  getRandomCustomerCount:randomCount,
-                  customersArray:[]
+                  getRandomCustomerCount:[],
                   //firstAndPike.randomCount?
                   //console.log(randomCount);
-                  generatedCookyCountByHour:cookiesPerHour,
-                  hourlyCookyArray:[]
+                  generatedCookyCountByHour:cookiesPerHour[],
                   //console.log(cookiesPerHour);
-                  generatedCookiesByDay:cookiesPerDay,
-                  totalLocationCookies:[]
+                  generatedCookiesByDay:cookiesPerDay[],
                   //console.log(cookiesPerDay);
                   }
                   console.log(firstAndPike.min);
                   console.log(firstAndPike.max);
                   console.log(firstAndPike.cookiesPerSale);
                   console.log(firstAndPike.hours.length);
-                  console.log(firstAndPike.customersArray);
+                  console.log(firstAndPike.getRandomCustomerCount);
                   console.log(firstAndPike.hourlyCookyArray);
                   console.log(firstAndPike.totalLocationCookies);
 
