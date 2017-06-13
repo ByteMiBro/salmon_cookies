@@ -27,7 +27,7 @@ function cookiesPerHour(generatedCookieCountByHour)
 {
   /*
   return this.hours.map(function (hour) {
-    return this.getRandomCustomerCount() * this.cookiesPerHour;
+    return this.getRandomCustomerCount() * this.cookiesPerSale;
   });
   */
 
@@ -35,7 +35,7 @@ function cookiesPerHour(generatedCookieCountByHour)
   for (var i = 0; i < this.hours.length; i++) {
     var hour = this.hours[i];
 
-    result[i] = this.getRandomCustomerCount() * this.cookiesPerHour;
+    result[i] = this.getRandomCustomerCount() * this.cookiesPerSale;
   }
   this.simulatedCookiesByHour = result;
 }
