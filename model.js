@@ -1,10 +1,11 @@
 //just list of stores
 //calculates daily projection sales for each location
-function randomCount()
+function generateRandomCustomersByHour()
 {
   var randomCustomersPerHour = [];
 
   for (var i = 0 ; i < this.hours.length ; i++) {
+    // TODO: We should not have fractional customers
     randomCustomersPerHour[i] = Math.random() * (this.max - this.min) + this.min;
   }
 
@@ -27,8 +28,8 @@ function randomCount()
 function cookiesPerHour()
 {
   /*
-  return this.hours.map(function (hour) {
-    return this.getRandomCustomerCount() * this.cookiesPerSale;
+  return this.hours.map(function (hour, i) {
+    return this.simulatedCustomersByHour[i] * this.cookiesPerSale;
   });
   */
 
@@ -36,7 +37,7 @@ function cookiesPerHour()
   for (var i = 0; i < this.hours.length; i++) {
     var hour = this.hours[i];
 
-    result[i] = this.getRandomCustomerCount() * this.cookiesPerSale;
+    result[i] = this.simulatedCustomersByHour[i] * this.cookiesPerSale;
   }
   this.simulatedCookiesByHour = result;
 }
@@ -63,7 +64,7 @@ var firstAndPike = {min:23,
   //hours: specify the actual hours the store is open not the number of hours
   //hours: start at the first hour store opens and end with the last hour the store is open
   hours:[6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
-  getRandomCustomerCount:randomCount,
+  generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
@@ -74,7 +75,7 @@ var seaTacAirport = {min:3,
   max:24,
   cookiesPerSale:1.2,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-  getRandomCustomerCount:randomCount,
+  generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
@@ -82,7 +83,7 @@ var seattleCenter = {min:11,
   max:38,
   cookiesPerSale:3.7,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-  getRandomCustomerCount:randomCount,
+  generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
@@ -91,7 +92,7 @@ var capitolHill = {min:20,
   max:38,
   cookiesPerSale:2.3,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-  getRandomCustomerCount:randomCount,
+  generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
@@ -99,7 +100,7 @@ var alki = {min:2,
   max:16,
   cookiesPerSale:4.6,
   hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
-  getRandomCustomerCount:randomCount,
+  generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour:cookiesPerHour,
   generatedCookiesByDay:cookiesPerDay,
 };
