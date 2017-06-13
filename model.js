@@ -8,7 +8,7 @@ function generateRandomCustomersByHour()
     // TODO: We should not have fractional customers
     randomCustomersPerHour[i] = Math.random() * (this.max - this.min) + this.min;
   }
-
+//ok
   //create a new array with same number of items but runs this code for each item
   this.simulatedCustomersByHour = randomCustomersPerHour;
 }
