@@ -98,12 +98,23 @@ var alki = {min:2,
   generatedCookieCountByHour: cookiesPerHour,
   generatedCookiesByDay: cookiesPerDay,
 };
-
-var storeModel = [firstAndPike,
-  seaTacAirport,
-  seattleCenter,
-  capitolHill,
-  alki,
+function StoreModel(name, minExpectedCustomers, minExpectedCustomers, cookiesPerSale, hours)
+{
+  this.min = minExpectedCustomers;
+  this.max = minExpectedCustomers;
+  this.cps = cookiesPerSale;
+  this.hrs = hours;
+  this.generateCustomersByHour = generateRandomCustomersByHour;
+  this.generatedCookieCountByHour = cookiesPerHour;
+  this.generatedCookiesByDay = cookiesPerDay;
+};
+s
+var listOfStores = [
+  new CookieStore('First And Pike', 23, 65, 6.3),
+  new CookieStore('SeaTac Airport', 3, 24, 1.2),
+  new CookieStore('Seattle Center', 11, 38, 3.7),
+  new CookieStore('Capitol Hill', 11, 38, 2.3),
+  new CookieStore('Alki', 2, 16, 4.6),
 ];
 
-console.log(storeModel);
+console.log(listOfStores);
