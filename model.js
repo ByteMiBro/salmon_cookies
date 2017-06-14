@@ -1,5 +1,15 @@
 //just list of stores
 //calculates daily projection sales for each location
+function StoreModel(name, minExpectedCustomers, minExpectedCustomers, cookiesPerSale, hours)
+{
+  this.min = minExpectedCustomers;
+  this.max = minExpectedCustomers;
+  this.cps = cookiesPerSale;
+  this.hrs = hours;
+  StoreModel.prototype.generateCustomersByHour = generateRandomCustomersByHour();
+  StoreModel.prototype.generatedCookieCountByHour = cookiesPerHour();
+  StoreModel.prototype.generatedCookiesByDay = cookiesPerDay();
+};
 function generateRandomCustomersByHour()
 {
 /*  var hour = this.hours[i];
@@ -13,12 +23,10 @@ function generateRandomCustomersByHour()
     // TODO: We should not have fractional customers
     randomCustomersPerHour[i] = Math.random() * (this.max - this.min) + this.min;
   }
-//ok
-  //create a new array with same number of items but runs this code for each item
+
   this.simulatedCustomersByHour = randomCustomersPerHour;
 }
-/*testRandomCount(getRandomCustomerCount)
-// take number of average cookies times*/
+
 function cookiesPerHour()
 {
   /*
@@ -35,7 +43,7 @@ function cookiesPerHour()
   }
   this.simulatedCookiesByHour = result;
 }
-//ceck the amount of hours at every store then multipy that by
+//check the amount of hours at every store then multipy that by
 function cookiesPerDay()
 { //eslint-disable-line
   var calculatedSum = 0;
@@ -54,7 +62,7 @@ function cookiesPerDay()
 // Add function to format 24-hour time as AM/PM
 // Maybe update hours on all locations to use 24-hour time
 
-var firstAndPike = {min:23,
+/*var firstAndPike = {min:23,
   max:65,
   cookiesPerSale:6.3,
   //hours: specify the actual hours the store is open not the number of hours
@@ -97,24 +105,14 @@ var alki = {min:2,
   generateCustomersByHour: generateRandomCustomersByHour,
   generatedCookieCountByHour: cookiesPerHour,
   generatedCookiesByDay: cookiesPerDay,
-};
-function StoreModel(name, minExpectedCustomers, minExpectedCustomers, cookiesPerSale, hours)
-{
-  this.min = minExpectedCustomers;
-  this.max = minExpectedCustomers;
-  this.cps = cookiesPerSale;
-  this.hrs = hours;
-  this.generateCustomersByHour = generateRandomCustomersByHour;
-  this.generatedCookieCountByHour = cookiesPerHour;
-  this.generatedCookiesByDay = cookiesPerDay;
-};
-s
+};*/
+
 var listOfStores = [
-  new CookieStore('First And Pike', 23, 65, 6.3),
-  new CookieStore('SeaTac Airport', 3, 24, 1.2),
-  new CookieStore('Seattle Center', 11, 38, 3.7),
-  new CookieStore('Capitol Hill', 11, 38, 2.3),
-  new CookieStore('Alki', 2, 16, 4.6),
+  new StoreModel('First And Pike', 23, 65, 6.3),
+  new StoreModel('SeaTac Airport', 3, 24, 1.2),
+  new StoreModel('Seattle Center', 11, 38, 3.7),
+  new StoreModel('Capitol Hill', 11, 38, 2.3),
+  new StoreModel('Alki', 2, 16, 4.6),
 ];
 
 console.log(listOfStores);
