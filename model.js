@@ -1,17 +1,17 @@
 
 function StoreModel(name, minExpectedCustomers, maxExpectedCustomers, cookiesPerSale, hours)
 {
-  this.min = minExpectedCustomers;
-  this.max = maxExpectedCustomers;
-  this.cps = cookiesPerSale;
+  this.minExpectedCustomers = minExpectedCustomers;
+  this.maxExpectedCustomers = maxExpectedCustomers;
+  this.cookiesPerSale = cookiesPerSale;
   this.hours = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-  this.generateCustomersByHour = generateRandomCustomersByHour;
-  this.generatedCookieCountByHour = cookiesPerHour;
-  this.generatedCookiesByDay = cookiesPerDay;
+  this.generateCustomersByHour = generateRandomCustomersByHour();
+  this.generatedCookieCountByHour = cookiesPerHour();
+  this.generatedCookiesByDay = cookiesPerDay();
 
 };
 
-function generateRandomCustomersByHour()
+StoreModel.prototype.generateRandomCustomersByHour = function()
 {
 /*  var hour = this.hours[i];
   return this.hours.map(function (hour, i)
@@ -26,9 +26,9 @@ function generateRandomCustomersByHour()
   }
 
   this.simulatedCustomersByHour = randomCustomersPerHour;
-}
+};
 
-function cookiesPerHour()
+StoreModel.prototype.cookiesPerHour = function()
 {
   /*
   return this.hours.map(function (hour, i) {
@@ -43,9 +43,9 @@ function cookiesPerHour()
     result[i] = this.simulatedCustomersByHour[i] * this.cookiesPerSale;
   }
   this.simulatedCookiesByHour = result;
-}
+};
 //check the amount of hours at every store then multipy that by
-function cookiesPerDay()
+StoreModel.prototype.cookiesPerDay = function ()
 { //eslint-disable-line
   var calculatedSum = 0;
   for(var i = 0; i < this.hours.length; i++)
@@ -54,7 +54,8 @@ function cookiesPerDay()
 
     calculatedSum = (valueFromArray + calculatedSum);
   }
-  this.simulatedCookiesByDay = calculatedSum;}
+  this.simulatedCookiesByDay = calculatedSum;
+};
 
 var listOfStores = [
   new StoreModel('First And Pike', 23, 65, 6.3),
