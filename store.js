@@ -5,30 +5,37 @@ and fouthr colum is expected cookies per hour fifth colum is totol cookies in da
 var stores = [
   {
     name: 'First And Pike',
-    avgCustomersByHour: [10, 19, 8],
+    cookiesPerHour: [10, 19, 8],
   },
   {
     name: 'SeaTac Airport',
-    avgCustomersByHour: [12, 15, 25],
+    cookiesPerHour: [12, 15, 25],
   },
   {
     name: 'Seattle Center',
-    avgCustomersByHour: [10, 19, 8],
+    cookiesPerHour: [10, 19, 8],
   },
   {
     name: 'Capitol Hill',
-    avgCustomersByHour: [12, 15, 25],
+    cookiesPerHour: [12, 15, 25],
   },
   {
     name: 'Alki',
-    avgCustomersByHour: [12, 15, 25],
+    cookiesPerHour: [12, 15, 25],
   },
 ];
 console.log(stores);
 
 var storeLocationsContainer = document.getElementById('store-locations');
 console.log(storeLocationsContainer);
-
+var storeLocationsContainer = document.getElementById('store-locations');
+console.log(storeLocationsContainer);
+var storeLocationsContainer = document.getElementById('store-locations');
+console.log(storeLocationsContainer);
+var storeLocationsContainer = document.getElementById('store-locations');
+console.log(storeLocationsContainer);
+var storeLocationsContainer = document.getElementById('store-locations');
+console.log(storeLocationsContainer);
 for (var i = 0; i < stores.length; i++) {
   var store = stores[i];
 
@@ -49,10 +56,10 @@ function addStoreRow(container, store) {
   container.appendChild(storeRow);
 }
 
-function addCellForEachHour(row, customersByHour) {
-  for (var j = 0; j < customersByHour.length; j++) {
+function addCellForEachHour(row, cookiesPerHour) {
+  for (var j = 0; j < cookiesPerHour.length; j++) {
     var hourCell = document.createElement('td');
-    hourCell.textContent = customersByHour[j];
+    hourCell.textContent = cookiesPerHour[j];
     row.appendChild(hourCell);
   }
 }
