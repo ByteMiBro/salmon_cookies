@@ -1,6 +1,7 @@
 'use strict';
 function StoreModel(name, minExpectedCustomers, maxExpectedCustomers, cookiesPerSale, hours)
 {
+  this.name = name;
   this.minExpectedCustomers = minExpectedCustomers;
   this.maxExpectedCustomers = maxExpectedCustomers;
   this.cookiesPerSale = cookiesPerSale;
