@@ -1,4 +1,9 @@
 'use strict';
+console.log('app.js loaded');
+
+/*function print () {
+  window.print();
+}*/
 //create a way for each stores array of cookies per hour
 //to be logged in table
 //to do this I need to create a row with the stores name
@@ -18,16 +23,16 @@ function addStoreRow()
 {
   //create a row in the body of the table
   var storeRow = document.createElement('tr');
-  var storeRow = document.createTextNode();
+  var storeRow = document.createTextNode('tr');
   //create a cell for the store name
-  var storeNameCell = document.createElement('td');
-  var storeNameCell = document.createTextNode();
+  var storeNameCellEl = document.createElement('td');
+  var storeNameCellTxt = document.createTextNode('td');
   //for every cell provide the name of store from list of stores in text
   storeNameCell.textContent = store.name;
   //add a store name cell to every store row
   storeRow.appendChild(storeNameCell);
   //don't need to append store name because it goes through row
   addCellForEachHour(storeRow, store.cookiesPerHour);
-}
+}*/
 //for each hour collumn
 //var document.createElement('td');
