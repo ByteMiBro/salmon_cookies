@@ -6,7 +6,7 @@
 //so I need to create a table cell for each item
 //create an empty element for the first column to store the rows
 
-for (var i = 0 ; i < listOfStores.length ; i++)
+/*for (var i = 0 ; i < listOfStores.length ; i++)
 {
 //create a variable that stores the items in list of stores
   var store = listOfStores[i];
