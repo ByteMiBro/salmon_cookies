@@ -1,11 +1,17 @@
 .fish{
   background-image: url("../images/fish.jpg");
 }
+.data{
+  padding-bottom: 50px;
+}
 .wrapper{
   margin: 0px auto;
   max-width: 700px;
   padding: 5px;
-
+  background-color: salmon;
+}
+.cutter{
+  background-image: url("../images/cutter.jpeg");
 }
 .page-header p{
   text-align: center;
