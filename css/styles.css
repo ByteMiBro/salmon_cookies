@@ -6,11 +6,11 @@
   padding-bottom: 50px;
 }
 .wrapper{
-  margin: auto;
+  margin: 0 auto;
   max-width: 960px;
   padding: 5px;
   background-color: salmon;
-
+  
 }
 .cutter{
   background-image: url("../images/cutter.jpeg");
