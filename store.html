@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pat's Salmon Cookies (Mitchell)</title>
-  <link href="styles.css"rel="stylesheet" />
+  <title>Pat's Salmon Cookies(Mitchell)</title>
+  <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <header>
-    Cookie Information
+  <div class = "fish">
+    <img src = "images/fish.jpg"/>
+  </div>
+<div class="wrapper">
+  <div class = "cutter">
+    <img src = "images/cutter.jpeg"/>
+<div class = "content">
+  <header class = "page-header">
+    <p>Cookie Information</p>
   </header>
-  <table>
+  <table class = "data">
     <thead>
       <tr>
         <th>locations</th>
@@ -50,7 +57,7 @@
       </tr>
     </tbody>
   </table>
-  <table>
+  <table class = "scrollit">
     <thead>
       <tr>
         <th></th>
@@ -72,7 +79,7 @@
         <th>Daily Location Total</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id = "store-locations">
       <tr>
         <td>1st and Pike</td>
         <td></td>
@@ -189,10 +196,15 @@
       </tr>
     </tbody>
   </table>
+  <div class = "clearfix"/>
+</div>
+</div>
+</div>
+</div>
   <!--table of store locations with calculations of cookies-->
   <!--first colum is location second colum is hours third columb is expected customers
   and fouthr colum is expected cookies per hour fifth colum is totol cookies in day-->
-<script src="model.js"></script>
-<script src="store.js"></script>
+<script src="js/model.js"></script>
+<script src="js/store.js"></script>
 </body>
 </html>
