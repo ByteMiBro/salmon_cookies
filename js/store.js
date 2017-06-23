@@ -10,6 +10,7 @@ console.log('app.js loaded');
 //then I need to take the values from that array and log them on a table cell
 //so I need to create a table cell for each item
 //create an empty element for the first column to store the rows
+console.log(listOfStores);
 var storeLocationsContainer = document.getElementById('store-locations');
 console.log(storeLocationsContainer);
 for (var i = 0 ; i < listOfStores.length ; i++)
@@ -33,17 +34,17 @@ function addStoreRow(store)
   //add a store name cell to every store row
   storeRow.appendChild(storeNameCell);
   //don't need to append store name because it goes through row
-  addCellForEachHour(storeRow, store.cookiesPerHour);
-  //storeLocationsContainer.appendChild(storeRow);
+  addCellForEachHour(storeRow, this.cookiesPerHour);
+  //container.appendChild(storeRow);
 }
 
-function addCellForEachHour(cookiesPerHour)
+function addCellForEachHour(this.cookiesPerHour)
 {
   for(var m = 0; m < cookiesPerHour.length; m++)
   {
     var hourCell = document.createElement('td');
-    var row = document.createElement()
-    hourCell.textContent = cookiesPerHour[m];
+    //var row = document.createElement()
+    hourCell.textContent = this.cookiesPerHour[m];
     //row.appendChild(hourCell);
   }
 }

@@ -1,3 +1,52 @@
+header{
+  text-align: center;
+  font-size: 2em;
+}
+body{
+  background-color: salmon;
+}
+
+#fosh{
+  position:relative;
+  margin:0 auto;
+}
+
+#fosh img{
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes foshFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#fosh img.frosted {
+animation-name: fishFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+
 .fish{
   background-image: url("../images/fish.jpg");
   background-color: red;
@@ -10,7 +59,7 @@
   max-width: 960px;
   padding: 5px;
   background-color: salmon;
-  
+
 }
 .cutter{
   background-image: url("../images/cutter.jpeg");
